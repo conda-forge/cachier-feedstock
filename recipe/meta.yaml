@@ -23,7 +23,6 @@ requirements:
     - pip
     - python >=3.7
   run:
-    - click
     - pathtools
     - portalocker
     - python >=3.7
