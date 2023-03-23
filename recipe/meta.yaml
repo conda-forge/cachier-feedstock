@@ -1,5 +1,5 @@
 {% set name = "cachier" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cachier-{{ version }}.tar.gz
-  sha256: b24eb049d8871a191fe3096cacc9ec7aa4d5aac7fe16fd6c41cff4ad7d1e2d32
+  sha256: 3280afd8b451695967609b431687fd4a67016b788ba3b8c15dfe5510107ee4c3
   patches:
     - 0001-add-scripts-package.patch
 
