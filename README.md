@@ -1,11 +1,11 @@
-About cachier
-=============
+About cachier-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cachier-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/shaypal5/cachier
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cachier-feedstock/blob/main/LICENSE.txt)
 
 Summary: Persistent, stale-free, local and cross-machine caching for Python functions.
 
