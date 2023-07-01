@@ -19,13 +19,17 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
+    - setuptools >=67.6.0
   run:
     - click
     - pathtools
     - portalocker
-    - python >=3.7
+    - python >=3.8
     - watchdog
+
+    # Not listed as required (it's optional) upstream but needed for import
+    - pymongo
 
 test:
   imports:
