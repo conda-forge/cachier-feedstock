@@ -11,7 +11,7 @@ source:
 
 build:
   entry_points:
-    - cachier=cachier.__naim__:cli
+    - cachier=cachier.__main__:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
@@ -27,6 +27,7 @@ requirements:
     - watchdog >=2.3.1
 
     # Not listed as required (it's optional) upstream but needed for import
+    - click
     - pymongo
 
 test:
