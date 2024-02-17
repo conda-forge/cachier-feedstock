@@ -11,7 +11,7 @@ source:
 
 build:
   entry_points:
-    - cachier=cachier.scripts.cli:cli
+    - cachier=cachier.__naim__:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
@@ -22,11 +22,9 @@ requirements:
     - python >=3.8
     - setuptools >=67.6.0
   run:
-    - click
-    - pathtools
-    - portalocker
+    - portalocker >=2.3.2
     - python >=3.8
-    - watchdog
+    - watchdog >=2.3.1
 
     # Not listed as required (it's optional) upstream but needed for import
     - pymongo
