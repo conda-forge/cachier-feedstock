@@ -1,5 +1,5 @@
 {% set name = "cachier" %}
-{% set version = "3.1.0" %}
+{% set version = "3.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cachier-{{ version }}.tar.gz
-  sha256: 62e2b371b2c6a92f5a66d84f21826eddae3099bd648069d4259938e76135b99e
+  sha256: 74db2c4526115f44924d478d6373d604ab9da80da7f29d8f65f8ccf3f7220b71
 
 build:
   entry_points:
