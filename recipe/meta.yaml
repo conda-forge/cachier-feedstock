@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cachier-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cachier-{{ version }}.tar.gz
   sha256: 8ef53b6ae83ba04d8864d2e1f45eb8b46eecb611d0f6a24c006e8fda074c6557
 
 build:
@@ -14,16 +14,16 @@ build:
     - cachier=cachier.__main__:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=67.6.0
   run:
     - portalocker >=2.3.2
-    - python >=3.8
+    - python >={{ python_min }}
     - watchdog >=2.3.1
 
     # Not listed as required (it's optional) upstream but needed for import
@@ -38,6 +38,7 @@ test:
     - cachier --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/shaypal5/cachier
