@@ -1,5 +1,5 @@
 {% set name = "cachier" %}
-{% set version = "3.1.2" %}
+{% set version = "3.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,20 +7,21 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cachier-{{ version }}.tar.gz
-  sha256: 8ef53b6ae83ba04d8864d2e1f45eb8b46eecb611d0f6a24c006e8fda074c6557
+  sha256: e9fa32182801e40ce64ba4c4bed86aa263307c24bc149eb93ed27084b152e167
 
 build:
   entry_points:
     - cachier=cachier.__main__:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools >=67.6.0
+    - setuptools
+    - wheel
   run:
     - portalocker >=2.3.2
     - python >={{ python_min }}
