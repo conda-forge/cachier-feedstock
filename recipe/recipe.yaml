@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: cachier
-  version: "4.1.0"
+  version: "4.2.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/cachier-${{ version }}.tar.gz
-  sha256: 83fbc941829f66068d83ba1ecd0d5406a65bd67bb623a0c2a0cf926dc36508b4
+  sha256: db9626237176ca837fa77dd5d15581453b2e9926a1a9ead94d4e676f6af8c5e4
 
 build:
   number: 0
