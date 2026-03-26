@@ -27,9 +27,10 @@ requirements:
     - setuptools
     - wheel
   run:
-    - portalocker >=2.3.2
     - python >=${{ python_min }}
     - watchdog >=2.3.1
+    - pympler >=1
+    - portalocker >=2.3.2
     # Not listed as required (it's optional) upstream but needed for import
     - click
     - pymongo
@@ -39,7 +40,9 @@ tests:
       imports:
         - cachier
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - python ${{ python_min }}.*
